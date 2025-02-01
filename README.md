@@ -13,6 +13,8 @@ Para la realización de este proyecto se utilizaron diversas estrategias, tecnol
   + RESTful API: En el caso de querer proporcionar acceso remoto a los datos del blog (por ejemplo, para consumo por una aplicación móvil o frontend independiente), se utilizó Spring Web para crear una API RESTful. Esto facilita la exposición de los datos en formato JSON y la gestión de recursos mediante los métodos estándar de HTTP (GET, POST, PUT, DELETE).
 
   + Base de datos: Normalmente se utiliza una base de datos relacional como MySQL o PostgreSQL para almacenar los datos del blog (autores, publicaciones, comentarios, etc.). En este caso y para una instalación sin dependencias de herramientas de gestión de bases de datos, se utilizó SQLite, sin embargo, es posible cambiar el origen de datos a MySQL o PostgreSQL sin mayor complicación.
+  
+  + Manejo de errores y excepciones: Spring Boot facilita la creación de un manejo centralizado de errores utilizando `@ControllerAdvice`. Esta anotación permite interceptar excepciones específicas o generales en todos los controladores de la aplicación y devolver respuestas adecuadas (por ejemplo, mensajes de error estructurados en formato JSON para una API REST). Esto proporciona una experiencia coherente y controlada en cuanto a errores y excepciones.
 
   + Pruebas: Se emplean herramientas como JUnit y Spring Test para realizar pruebas unitarias e integradas, que aún están pendientes de desarrollo.
 
@@ -80,7 +82,7 @@ La app define los siguientes controladores
 | ------ | --- | ---------- | --------------------------- |
 | POST   | /api/comments | Registra un nuevo comentario en un blog  | [JSON](#add-comment) |
 
-Para realizar las pruebas se puede importar el archivo postman-collection.json en Postman.
+Para realizar las pruebas se puede importar el archivo `postman-collection.json` en Postman.
 
 ## Ejemplos de peticiones
 
